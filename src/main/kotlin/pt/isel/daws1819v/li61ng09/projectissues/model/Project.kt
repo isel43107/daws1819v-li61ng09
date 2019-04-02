@@ -11,7 +11,7 @@ class Project (
 
         @Column(unique = true)
         var name: String,
-        var shortDescription: String,
+        var description: String,
         @Id
         @GeneratedValue
         var id: Long? = null
