@@ -1,0 +1,61 @@
+// Global settings
+:ascii-ids:
+:encoding: UTF-8
+:lang: pt_PT
+:icons: font
+:toc: left
+:toclevels: 3
+:numbered:
+:stem:
+
+[[doc]]
+= DAW Final Project
+:author: Copyright (c) 2018/2019 Alex Paulo Borges.
+:revnumber: {app-product-name} {app-version}
+:revdate: {last-update-label} {docdatetime}
+:version-label!:
+
+
+NOTE: Last Edit: 2018/2019. Generate: {localdate} {localtime}
+
+toc::[]
+
+[[doc.summary]]
+== Summary
+
+
+== WebAPI Resources
+
+* Projects 
+
+
+== Domain Model
+
+[uml]
+----  
+@startuml
+
+class Project
+
+
+State "N" -* "1" Project : < belong
+
+Transition "N" -* "1" Project : < belong  
+
+Project "1" *- "N" Issue : has > 
+
+Project "1" *- "N" Label : has > 
+
+Issue "1" o-- "N" Label : has
+
+Issue "1" o-- "N" Comment : has
+
+Issue "1" -- "1" State : has
+
+@enduml
+
+[[docs.reference]]
+== Referencias 
+
+* http://plantuml.com/class-diagram
+* https://spring.io/projects/spring-hateoas
