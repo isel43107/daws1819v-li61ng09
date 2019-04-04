@@ -53,8 +53,9 @@ Issue "1" o-- "N" Comment : has
 Issue "1" -- "1" State : has
 
 @enduml
+----
 
-[[docs.reference]]
+[[doc.references]]
 == Referencias 
 
 * http://plantuml.com/class-diagram
