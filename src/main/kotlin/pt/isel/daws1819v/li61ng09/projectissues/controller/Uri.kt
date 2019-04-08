@@ -8,6 +8,7 @@ object Uri {
     fun forProjects() = URI(projects)
     fun forProjectsById(acr: String) = courseByIdTemplate.expand(acr)
 
+    const val home = "/"
     const val projects = "/projects"
     const val projectById = "/projects/{id}"
     val courseByIdTemplate = UriTemplate("/projects/{id}")
