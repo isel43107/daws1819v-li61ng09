@@ -24,12 +24,55 @@ toc::[]
 == Summary
 
 
-== WebAPI Resources
+== PUBLIC API 
 
-* Projects 
+=== Resources
+
+.Table of resource description
+|====
+|Resources |Descriptions
+|Projects | Represent a collection of Project
+|Project |Represent a single project
+|ProjectIssues |Represent a collection of project's issues 
+|ProjectIssue |Represent a single project's issue
+|====
 
 
-== Domain Model
+=== Representation
+
+
+=== Links Relations 
+
+.Table of Link relation
+|====
+|Link Rel |Description
+|project:create |Create a new Project resource
+|project:update |Create a new Project resource
+|issue:next-state |Automatic change Issue state, this will based on project issue transitions table
+|issue:close |Close a issue. What
+|issue:archive |Archive a issue. This link rel SHOULD BE only available when issue is at 'close' state
+|issue:close |Close a issue. 
+|issue:allow-states |Present Issue allow states
+|====
+
+=== Common Links Relations
+
+
+
+== PRIVATE (INTERNAL INFORMATION)
+
+NOTE: This section provide information for internal development.
+
+=== Issue - States
+
+Common
+
+* close
+* archive
+
+Project specific states
+
+=== Domain Model
 
 [uml]
 ----  
